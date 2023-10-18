@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Cameras.qml</file>
+        <file>Star.qml</file>
+        <file>Cameras_box.qml</file>
+        <file>Control_panel.qml</file>
+        <file>Control_button.qml</file>
+        <file>Map_box.qml</file>
+        <file>Upper_stars.qml</file>
+        <file>Lower_stars.qml</file>
+    </qresource>
+</RCC>
