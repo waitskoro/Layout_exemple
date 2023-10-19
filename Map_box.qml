@@ -5,15 +5,34 @@ import QtQuick.Controls 2.12
 
 Rectangle {
 
-    Plugin{
-        id: mapPlugin
-        name: "osm"
-    }
+    radius: 10
 
-    Map{
-        anchors.fill: parent
-        plugin: mapPlugin
-        center: QtPositioning.coordinate(56.29, 84.57) // Tomsk
-        zoomLevel: 14
+    Row{
+        Rectangle{
+            width: parent.width
+            height: parent.height * 0.1/1
+        }
+
+        Rectangle{
+            width: parent.width
+            height: parent.height * 0.8/1
+
+            Plugin{
+                id: mapPlugin
+                name: "osm"
+            }
+
+            Map{
+                anchors.fill: parent
+                plugin: mapPlugin
+                center: QtPositioning.coordinate(56.29, 84.57) // Tomsk
+                zoomLevel: 14
+            }
+        }
+
+        Rectangle{
+            width: parent.width
+            height: parent.height * 0.1/1
+        }
     }
 }

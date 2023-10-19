@@ -19,19 +19,19 @@ Window {
             top: parent.top
         }
 
-        height: parent.height * 1/3
+        height: parent.height * 0.95/3
     }
 
     Upper_stars{
         id: upper_stars
-        anchors{
 
+        anchors{
             left: parent.left
             right: parent.right
             top: cameras_box.bottom
         }
 
-        height: parent.height * 0.3/3
+        height: parent.height * 0.15/3
     }
 
     Map_box{
@@ -43,33 +43,20 @@ Window {
             top: upper_stars.bottom
         }
 
-        height: parent.height * 1.1/3
+        height: parent.height * 1.4/3
     }
 
-    Lower_stars{
-        id: lower_stars
+    Control_panel{
+        id: control_panel
 
         anchors{
 
             left: parent.left
             right: parent.right
             top: map_box.bottom
-        }
-
-        height: parent.height * 0.1/3
-    }
-
-    Control_panel{
-        id: control_panel
-        anchors{
-
-            left: parent.left
-            right: parent.right
-            top: lower_stars.bottom
             bottom: parent.bottom
         }
 
-        height: parent.height * 0.4/3
+        height: parent.height * 0.5/3
     }
-
 }

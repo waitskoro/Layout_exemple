@@ -8,6 +8,6 @@
         <file>Control_button.qml</file>
         <file>Map_box.qml</file>
         <file>Upper_stars.qml</file>
-        <file>Lower_stars.qml</file>
+        <file>source/star.png</file>
     </qresource>
 </RCC>
