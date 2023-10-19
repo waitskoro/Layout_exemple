@@ -11,21 +11,8 @@ Button {
         radius: 5
 
         Text {
-            text: button.text
             color: "white"
             anchors.centerIn: parent
-        }
-    }
-
-    onClicked: {
-
-        if (button.text === "Выкл")
-        {
-            button.text = "Вкл"
-        }
-        else
-        {
-            button.text = "Выкл"
         }
     }
 }

@@ -9,7 +9,6 @@ Row {
     model: 13
 
     delegate:
-
         Star {
             width: (row_stars.width - (repeater_stars.count - 1) * spacing) / repeater_stars.count
             height: row_stars.height - 10
