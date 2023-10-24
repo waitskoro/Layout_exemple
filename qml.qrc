@@ -9,5 +9,6 @@
         <file>Map_box.qml</file>
         <file>Upper_stars.qml</file>
         <file>source/star.png</file>
+        <file>style/ButtonStyle.qml</file>
     </qresource>
 </RCC>
