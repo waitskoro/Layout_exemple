@@ -2,54 +2,55 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 
 Rectangle {
+    id: root
     color: "black"
 
-    property int currentIndex: -1
+    property int row: 0
+    property int column: 0
 
     SwipeView{
         id: swipeView
         width: parent.width
         height: parent.height
 
-        Item{
+        Repeater{
+            model: 2
 
-            Grid{
-                columns: 2
-                rows: 2
-                anchors.fill: parent
+            Item{
 
-                Repeater {
-                    model: 4
-                    delegate: Cameras {
+                Grid{
+                    id: grid_container
+                    columns: 2
+                    rows: 2
+                    anchors.fill: parent
 
-                        border.width: 2
+                    Repeater {
+                        model: 4
+                        delegate: Cameras {
+                            id: cam
+                            property bool fullscreen: false
 
-                        Text {
-                            text: "Камера " + (index + 1)
-                            anchors.centerIn: parent
-                        }
+                            border.width: 2
+                            Text {
+                                text: "Камера " + (index + 1)
+                                anchors.centerIn: parent
+                            }
 
+                            MouseArea {
+                                anchors.fill: parent
 
-                    }
-                }
-            }
-        }
+                                onClicked: {
+                                    onClicked: dialogLoader.source = "DialogWindow.qml"
+                                }
 
-        Item{
+                            }
 
-            Grid{
-                columns: 2
-                rows: 2
-                anchors.fill: parent
-
-                Repeater {
-                    model: 4
-                    delegate: Cameras {
-                    border.width: 2
-
-                    Text {
-                        text: "Камера " + (index + 1)
-                        anchors.centerIn: parent
+                            Loader {
+                                id: dialogLoader
+                                onLoaded: {
+                                    item.open();
+                                }
+                            }
                         }
                     }
                 }
@@ -85,9 +86,8 @@ Rectangle {
         }
 
         onClicked: {
-        if (swipeView.currentIndex < swipeView.count - 1) {
-            swipeView.currentIndex++
-            }
+            if (swipeView.currentIndex < swipeView.count - 1)
+                swipeView.currentIndex++
         }
     }
 }

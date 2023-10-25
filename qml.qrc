@@ -10,5 +10,6 @@
         <file>Upper_stars.qml</file>
         <file>source/star.png</file>
         <file>style/ButtonStyle.qml</file>
+        <file>DialogWindow.qml</file>
     </qresource>
 </RCC>
