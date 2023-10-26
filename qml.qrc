@@ -11,5 +11,6 @@
         <file>source/star.png</file>
         <file>style/ButtonStyle.qml</file>
         <file>DialogWindow.qml</file>
+        <file>source/close.png</file>
     </qresource>
 </RCC>
