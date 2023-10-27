@@ -1,21 +1,28 @@
 import QtQuick 2.12
+import QtQuick.Layouts 1.12
 
-Row {
-    id: row_stars
-    spacing: 5
+RowLayout {
+
+    Item {
+        Layout.preferredWidth: 2 // Отступ слева
+    }
+
 
     Repeater {
-    id: repeater_stars
-    model: 13
+        model: 21 // Количество звезд
+        Rectangle {
+            color: "#414247"
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
-    delegate:
-        Star {
-            width: (row_stars.width - (repeater_stars.count - 1) * spacing) / repeater_stars.count
-            height: row_stars.height - 10
-            anchors{
-                verticalCenter: parent.verticalCenter
+            Star{
+                anchors.fill: parent
             }
         }
+    }
+
+    Item {
+        Layout.preferredWidth: 2 // Отступ справа
     }
 }
 

@@ -9,7 +9,9 @@ Rectangle{
         id: image_star
         source: "qrc:/source/star.png"
         anchors.centerIn: parent
+        anchors.fill: parent
         height: star.height / 2
         width: star.width / 2
+        fillMode: Image.PreserveAspectFit
     }
 }

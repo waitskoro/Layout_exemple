@@ -26,43 +26,26 @@ Rectangle {
             Control_button{
 
                 text: "Открытие\nдверей\nсенсором"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
 
             Control_button{
 
                 text: "ВЫКЛ"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
 
             Control_button{
 
                 text: "ВЫКЛ"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
 
             Control_button{
 
                 text: "ВЫКЛ"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
             }
 
             Control_button{
 
-
                 text: "ВЫКЛ"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
         }
     }
@@ -87,33 +70,21 @@ Rectangle {
             Control_button{
 
                 text: "1\nдверь"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
 
             Control_button{
 
                 text: "2\nдверь"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
 
             Control_button{
 
                 text: "3\nдверь"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
 
             Control_button{
 
                 text: "4\nдверь"
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
         }
     }

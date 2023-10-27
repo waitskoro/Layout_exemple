@@ -6,8 +6,7 @@ Rectangle {
     id: root
     color: "black"
 
-    property int row: 0
-    property int column: 0
+    property Cameras cameraPanene
 
     SwipeView{
         id: swipeView
@@ -39,8 +38,6 @@ Rectangle {
                                 anchors.centerIn: parent
                             }
 
-                            border.width: 2
-
                             Layout.fillHeight: true
                             Layout.fillWidth: true
 
@@ -48,7 +45,7 @@ Rectangle {
                                 id: area
                                 anchors.fill: parent
 
-                                onDoubleClicked: {
+                                onClicked: {
                                     if (cameraPane.Layout.preferredWidth === 0) {
                                         cameraPane.Layout.preferredWidth = parent.width
                                         cameraPane.Layout.preferredHeight = parent.height
@@ -56,6 +53,8 @@ Rectangle {
                                         left_button.visible = false
                                         right_button.visible = false
                                         close_button.visible = true
+
+                                        cameraPanene = cameraPane
 
                                     }
                                     else {
@@ -92,6 +91,14 @@ Rectangle {
             source: "qrc:/source/close.png"
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
+        }
+
+        onClicked: {
+            cameraPanene.Layout.preferredWidth = 0
+            cameraPanene.Layout.preferredHeight = 0
+            left_button.visible = true
+            right_button.visible = true
+            close_button.visible = false
         }
     }
 

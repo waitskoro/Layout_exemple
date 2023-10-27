@@ -3,8 +3,8 @@ import QtQuick.Window 2.12
 
 Window {
     id: root
-    width: 600
-    height: 1200
+    width: 500
+    height: 800
     visible: true
     title: qsTr("Hello World")
     color: "black"
