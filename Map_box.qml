@@ -6,7 +6,7 @@ import QtQuick.Layouts 1.12
 
 Rectangle{
     id: root
-    radius: 24
+    radius: 12
     color: "black"
 
     Rectangle{
@@ -106,7 +106,7 @@ Rectangle{
             anchors.fill: parent
 
             Repeater {
-                model: 21 // Количество звезд
+                model: 21
                 Rectangle {
                     color: "transparent"
                     Layout.fillWidth: true

@@ -23,7 +23,7 @@ Button {
         color: "#20292F"
         border.width: 1
         border.color: "white"
-        radius: 12
+        radius: 6
     }
 }
 

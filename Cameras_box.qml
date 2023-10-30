@@ -85,9 +85,8 @@ Rectangle {
             topMargin: 10
         }
 
-        Image{
+        background: Image{
             source: "qrc:/source/close.svg"
-            fillMode: Image.PreserveAspectFit
         }
 
         onClicked: {
@@ -110,6 +109,10 @@ Rectangle {
             verticalCenter: parent.verticalCenter
         }
 
+        background: Image{
+            source: "qrc:/source/on_right.svg"
+        }
+
         onClicked: {
             if (swipeView.currentIndex > 0) {
                 swipeView.currentIndex--
@@ -126,6 +129,10 @@ Rectangle {
         anchors{
             right: parent.right
             verticalCenter: parent.verticalCenter
+        }
+
+        background: Image{
+            source: "qrc:/source/on_left.svg"
         }
 
         onClicked: {

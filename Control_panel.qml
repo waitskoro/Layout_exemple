@@ -61,6 +61,8 @@ Rectangle {
             right: parent.right
             top: part_first.bottom
             bottom: parent.bottom
+
+            topMargin: 5
         }
 
         RowLayout{

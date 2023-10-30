@@ -18,8 +18,6 @@ Window {
             right: parent.right
             top: parent.top
 
-            leftMargin: 5
-            rightMargin: 5
             topMargin: 5
         }
 
@@ -34,10 +32,9 @@ Window {
             right: parent.right
             top: cameras_box.bottom
 
-            topMargin: 9
+            topMargin: 5
             leftMargin: 7
             rightMargin: 7
-            bottomMargin: 10
         }
 
         height: parent.height * 0.15/3
@@ -71,6 +68,7 @@ Window {
             leftMargin: 5
             rightMargin: 5
             bottomMargin: 5
+            topMargin: 5
         }
 
         height: parent.height * 0.5/3
