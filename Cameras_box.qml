@@ -21,8 +21,6 @@ Rectangle {
                 GridLayout {
                     id: camerasGrid
                     columns: 2
-                    columnSpacing : 1
-                    rowSpacing : 1
                     rows: 2
                     anchors.fill: parent
 
@@ -88,9 +86,8 @@ Rectangle {
         }
 
         Image{
-            source: "qrc:/source/close.png"
+            source: "qrc:/source/close.svg"
             fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
         }
 
         onClicked: {

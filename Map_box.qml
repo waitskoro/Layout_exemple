@@ -6,24 +6,73 @@ import QtQuick.Layouts 1.12
 
 Rectangle{
     id: root
+    radius: 24
+    color: "black"
 
     Rectangle{
         id: upper_panel
         width: parent.width
         height: parent.height * 0.1/1
+        color: "transparent"
 
         anchors{
             top: root.top
         }
 
-        color: "black"
+        RowLayout{
+            anchors.fill: parent
+
+            Rectangle{
+                color: "transparent"
+                height: parent.height * 2/5
+                width: parent.width
+                anchors.verticalCenter: parent.verticalCenter
+
+                Text{
+                    text: "     Garibov | " + Qt.formatDateTime(new Date(), "dd MMMM hh:ss")
+                    color: "white"
+                }
+            }
+
+            Rectangle{
+                height: parent.height * 1/5
+                width: parent.width
+                color: "transparent"
+
+                Repeater {
+                    model: 4 // Количество звезд
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+
+                        Star{
+                            anchors.fill: parent
+                        }
+                    }
+                }
+
+            }
+
+            Rectangle{
+                color: "transparent"
+                height: parent.height * 1/5
+                width: parent.width
+
+            }
+
+            Rectangle{
+                color: "transparent"
+                height: parent.height * 1/5
+                width: parent.width
+            }
+        }
     }
 
     Rectangle{
         id: map
         width: parent.width
         height: parent.height * 0.8/1
-        color: "black"
+        color: "transparent"
 
         anchors{
             top: upper_panel.bottom
@@ -46,7 +95,7 @@ Rectangle{
         id: low_stars
         width: parent.width
         height: parent.height * 0.1/1
-        color: "black"
+        color: "transparent"
 
         anchors{
             top: map.bottom
@@ -56,15 +105,10 @@ Rectangle{
         RowLayout {
             anchors.fill: parent
 
-            Item {
-                Layout.fillWidth: true
-                Layout.preferredHeight: 5
-            }
-
             Repeater {
                 model: 21 // Количество звезд
                 Rectangle {
-                    color: "#414247"
+                    color: "transparent"
                     Layout.fillWidth: true
                     Layout.fillHeight: true
 
@@ -72,11 +116,6 @@ Rectangle{
                         anchors.fill: parent
                     }
                 }
-            }
-
-            Item {
-                Layout.fillWidth: true
-                Layout.preferredHeight: 5
             }
         }
     }

@@ -9,7 +9,7 @@ Rectangle {
 
     Rectangle{
         id: part_first
-        color: "blue"
+        color: "transparent"
         width: parent.width
         height: parent.height * 0.4/1
 
@@ -52,7 +52,7 @@ Rectangle {
 
     Rectangle{
         id: part_second
-        color: "green"
+        color: "transparent"
         width: parent.width
         height: parent.height * 0.6/1
 
