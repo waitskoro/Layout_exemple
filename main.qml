@@ -35,6 +35,7 @@ Window {
             topMargin: 5
             leftMargin: 7
             rightMargin: 7
+            bottomMargin: 5
         }
 
         height: parent.height * 0.15/3
@@ -50,6 +51,7 @@ Window {
 
             leftMargin: 5
             rightMargin: 5
+            topMargin: 5
         }
 
         height: parent.height * 1.4/3

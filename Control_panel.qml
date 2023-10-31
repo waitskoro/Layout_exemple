@@ -6,6 +6,7 @@ Rectangle {
     id: control_panel
     color: "transparent"
 
+    FontLoader { id: jetBrains; source: "qrc:/fonts/JetBrains Mono/JetBrainsMono.ttf"}
 
     Rectangle{
         id: part_first
@@ -25,34 +26,144 @@ Rectangle {
 
             Control_button{
 
-                text: "Открытие\nдверей\nсенсором"
+                Text{
+                    anchors.centerIn: parent
+                    text: "Открытие\nдверей\nсенсором"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 10
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
+            }
+
+            Control_button{
+
+                Text{
+                    anchors.centerIn: parent
+                    text: "ВЫКЛ"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
+            }
+
+            Control_button{
+
+                Text{
+                    anchors.centerIn: parent
+                    text: "ВЫКЛ"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
+            }
+
+            Control_button{
+
+                Text{
+                    anchors.centerIn: parent
+                    text: "ВЫКЛ"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
+            }
+
+            Control_button{
+
+                Text{
+                    anchors.centerIn: parent
+                    text: "ВЫКЛ"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                }
+
+
                 font.pixelSize: 12
                 width: parent.width * 1/5
-            }
 
-            Control_button{
+                Image{
 
-                text: "ВЫКЛ"
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
 
-                width: parent.width * 1/5
-            }
-
-            Control_button{
-
-                text: "ВЫКЛ"
-                width: parent.width * 1/5
-            }
-
-            Control_button{
-
-                text: "ВЫКЛ"
-                width: parent.width * 1/5
-            }
-
-            Control_button{
-
-                text: "ВЫКЛ"
-                width: parent.width * 1/5
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
             }
         }
     }
@@ -78,22 +189,123 @@ Rectangle {
 
             Control_button{
 
-                text: "1\nдверь"
+                Text{
+                    anchors.centerIn: parent
+                    text: "1\nдверь"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                    lineHeight: 0.7
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
             }
 
             Control_button{
 
-                text: "2\nдверь"
+                Text{
+                    anchors.centerIn: parent
+                    text: "2\nдверь"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                    lineHeight: 0.7
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
             }
 
             Control_button{
 
-                text: "3\nдверь"
+                Text{
+                    anchors.centerIn: parent
+                    text: "3\nдверь"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                    lineHeight: 0.7
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
             }
 
             Control_button{
 
-                text: "4\nдверь"
+                Text{
+                    anchors{
+
+                        centerIn: parent
+                    }
+
+                    text: "4\nдверь"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
+                    lineHeight: 0.7
+
+                }
+
+                width: parent.width * 1/5
+
+                Image{
+
+                    source: "qrc:/source/Indicator.svg"
+                    fillMode: Image.PreserveAspectFit
+                    anchors{
+                        bottom: parent.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        margins: 1
+                    }
+
+                    width: parent.width * 2/4
+                    height: parent.height * 1/5
+                }
             }
         }
     }

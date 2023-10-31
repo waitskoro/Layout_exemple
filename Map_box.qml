@@ -27,10 +27,13 @@ Rectangle{
                 width: parent.width * 5/14
                 height: parent.height
 
+                FontLoader { id: ibmPlex; source: "qrc:/fonts/IBM Plex Sans/IBMPlexSans-Regular.ttf" }
+
                 Text{
                     text: "     Garibov | " + Qt.formatDateTime(new Date(), "dd MMMM hh:ss")
                     color: "white"
                     font.pixelSize: 10
+                    font.family: ibmPlex.name
                     anchors.verticalCenter: parent.verticalCenter
                 }
             }
@@ -42,6 +45,10 @@ Rectangle{
 
                 RowLayout {
                     anchors.fill: parent
+
+                    Item{
+                        Layout.preferredWidth: 5
+                    }
 
                     Repeater {
                         model: 4
@@ -55,20 +62,63 @@ Rectangle{
                             }
                         }
                     }
+
+                    Item{
+                        Layout.preferredWidth: 5
+                    }
+
                 }
             }
 
             Rectangle{
-                color: "pink"
+                color: "transparent"
                 width: parent.width * 3/14
                 height: parent.height
+
+                FontLoader { id: jetBrains; source: "qrc:/fonts/JetBrains Mono/JetBrainsMono.ttf" }
+
+                Text{
+                    text: "007325"
+                    color: "white"
+                    font.family: jetBrains.name
+                    anchors{
+                        verticalCenter: parent.verticalCenter
+                        horizontalCenter: parent.horizontalCenter
+                    }
+                }
 
             }
 
             Rectangle{
-                color: "blue"
+                color: "transparent"
                 width: parent.width * 3/14
                 height: parent.height
+
+                RowLayout {
+                    anchors.fill: parent
+
+                    Item{
+                        Layout.preferredWidth: 5
+                    }
+
+                    Repeater {
+                        model: 4
+                        Rectangle {
+                            color: "transparent"
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+
+                            Star{
+                                anchors.fill: parent
+                            }
+                        }
+                    }
+
+                    Item{
+                        Layout.preferredWidth: 5
+                    }
+
+                }
             }
         }
     }
@@ -83,18 +133,19 @@ Rectangle{
             top: upper_panel.bottom
         }
 
-        Plugin{
+        Plugin {
             id: mapPlugin
-            name: "osm"
-        }
+            name: "esri"
+            }
 
-        Map{
+        Map {
+            id: mapView
             anchors.fill: parent
             plugin: mapPlugin
-            center: QtPositioning.coordinate(56.29, 84.57) // Tomsk
-            zoomLevel: 14
+            center: QtPositioning.coordinate(59.9386, 30.3141)
+            zoomLevel: 15
+            }
         }
-    }
 
     Rectangle{
         id: low_stars
@@ -111,7 +162,7 @@ Rectangle{
             anchors.fill: parent
 
             Item{
-                Layout.preferredWidth: 15
+                Layout.preferredWidth: 10
             }
 
             Repeater {
@@ -128,7 +179,7 @@ Rectangle{
             }
 
             Item{
-                Layout.preferredWidth: 15
+                Layout.preferredWidth: 10
             }
         }
     }

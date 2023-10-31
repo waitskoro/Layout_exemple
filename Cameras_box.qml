@@ -77,12 +77,11 @@ Rectangle {
         id: close_button
         visible: false
 
-        height: parent.height * 1/10
-        width: parent.width * 1/15
+        height: parent.height * 1.5/10
+        width: parent.width * 1.5/15
 
         anchors{
             right: parent.right
-            topMargin: 10
         }
 
         background: Image{

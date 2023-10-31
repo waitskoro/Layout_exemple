@@ -18,16 +18,20 @@ Button {
         radius: 6
     }
 
+    FontLoader { id: jetBrains; source: "qrc:/fonts/JetBrains Mono/JetBrainsMono.ttf"}
+
     Text {
         anchors.centerIn: parent
         text: controlButton.text
         color: "white"
         horizontalAlignment: Text.AlignHCenter
+        font.family: jetBrains.name
     }
 
     Image{
 
         source: "qrc:/source/Indicator.svg"
+        fillMode: Image.PreserveAspectFit
         anchors{
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
@@ -38,4 +42,3 @@ Button {
         height: parent.height * 1/5
     }
 }
-

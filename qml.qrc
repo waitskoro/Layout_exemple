@@ -8,12 +8,12 @@
         <file>Control_button.qml</file>
         <file>Map_box.qml</file>
         <file>Upper_stars.qml</file>
-        <file>style/ButtonStyle.qml</file>
         <file>source/star.svg</file>
         <file>source/close.svg</file>
         <file>source/on_left.svg</file>
         <file>source/on_right.svg</file>
         <file>source/Indicator.svg</file>
-        <file>Button_model_up.qml</file>
+        <file>fonts/JetBrains Mono/JetBrainsMono.ttf</file>
+        <file>fonts/IBM Plex Sans/IBMPlexSans-Regular.ttf</file>
     </qresource>
 </RCC>
