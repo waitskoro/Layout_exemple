@@ -102,7 +102,7 @@ Rectangle {
         id: left_button
         text: "<"
         height: parent.height * 1/3
-        width: parent.width * 1/15
+        width: parent.width * 1/18
 
         anchors{
             left: parent.left
@@ -124,7 +124,7 @@ Rectangle {
         id: right_button
         text: ">"
         height: parent.height * 1/3
-        width: parent.width * 1/15
+        width: parent.width * 1/18
 
         anchors{
             right: parent.right

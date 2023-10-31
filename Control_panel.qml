@@ -26,26 +26,33 @@ Rectangle {
             Control_button{
 
                 text: "Открытие\nдверей\nсенсором"
+                font.pixelSize: 12
+                width: parent.width * 1/5
             }
 
             Control_button{
 
                 text: "ВЫКЛ"
+
+                width: parent.width * 1/5
             }
 
             Control_button{
 
                 text: "ВЫКЛ"
+                width: parent.width * 1/5
             }
 
             Control_button{
 
                 text: "ВЫКЛ"
+                width: parent.width * 1/5
             }
 
             Control_button{
 
                 text: "ВЫКЛ"
+                width: parent.width * 1/5
             }
         }
     }

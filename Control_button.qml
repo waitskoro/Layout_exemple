@@ -11,19 +11,31 @@ Button {
     Layout.fillWidth: true
     Layout.fillHeight: true
 
-    Text {
-        anchors.centerIn: parent
-        text: controlButton.text
-        font.pixelSize: 12
-        color: "white"
-        horizontalAlignment: Text.AlignHCenter
-    }
-
     background: Rectangle{
         color: "#20292F"
         border.width: 1
         border.color: "white"
         radius: 6
+    }
+
+    Text {
+        anchors.centerIn: parent
+        text: controlButton.text
+        color: "white"
+        horizontalAlignment: Text.AlignHCenter
+    }
+
+    Image{
+
+        source: "qrc:/source/Indicator.svg"
+        anchors{
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+            margins: 1
+        }
+
+        width: parent.width * 2/4
+        height: parent.height * 1/5
     }
 }
 

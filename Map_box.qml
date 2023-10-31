@@ -19,51 +19,56 @@ Rectangle{
             top: root.top
         }
 
-        RowLayout{
+        Row{
             anchors.fill: parent
 
             Rectangle{
                 color: "transparent"
-                height: parent.height * 2/5
-                width: parent.width
-                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width * 5/14
+                height: parent.height
 
                 Text{
                     text: "     Garibov | " + Qt.formatDateTime(new Date(), "dd MMMM hh:ss")
                     color: "white"
+                    font.pixelSize: 10
+                    anchors.verticalCenter: parent.verticalCenter
                 }
             }
 
             Rectangle{
-                height: parent.height * 1/5
-                width: parent.width
                 color: "transparent"
+                width: parent.width * 3/14
+                height: parent.height
 
-                Repeater {
-                    model: 4 // Количество звезд
-                    Rectangle {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
+                RowLayout {
+                    anchors.fill: parent
 
-                        Star{
-                            anchors.fill: parent
+                    Repeater {
+                        model: 4
+                        Rectangle {
+                            color: "transparent"
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+
+                            Star{
+                                anchors.fill: parent
+                            }
                         }
                     }
                 }
+            }
+
+            Rectangle{
+                color: "pink"
+                width: parent.width * 3/14
+                height: parent.height
 
             }
 
             Rectangle{
-                color: "transparent"
-                height: parent.height * 1/5
-                width: parent.width
-
-            }
-
-            Rectangle{
-                color: "transparent"
-                height: parent.height * 1/5
-                width: parent.width
+                color: "blue"
+                width: parent.width * 3/14
+                height: parent.height
             }
         }
     }
@@ -105,6 +110,10 @@ Rectangle{
         RowLayout {
             anchors.fill: parent
 
+            Item{
+                Layout.preferredWidth: 15
+            }
+
             Repeater {
                 model: 21
                 Rectangle {
@@ -116,6 +125,10 @@ Rectangle{
                         anchors.fill: parent
                     }
                 }
+            }
+
+            Item{
+                Layout.preferredWidth: 15
             }
         }
     }

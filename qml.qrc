@@ -13,5 +13,7 @@
         <file>source/close.svg</file>
         <file>source/on_left.svg</file>
         <file>source/on_right.svg</file>
+        <file>source/Indicator.svg</file>
+        <file>Button_model_up.qml</file>
     </qresource>
 </RCC>
