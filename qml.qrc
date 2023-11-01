@@ -15,5 +15,8 @@
         <file>source/Indicator.svg</file>
         <file>fonts/JetBrains Mono/JetBrainsMono.ttf</file>
         <file>fonts/IBM Plex Sans/IBMPlexSans-Regular.ttf</file>
+        <file>source/neutral_button.svg</file>
+        <file>source/off_button.svg</file>
+        <file>source/on_button.svg</file>
     </qresource>
 </RCC>

@@ -25,6 +25,7 @@ Rectangle {
             anchors.fill: parent
 
             Control_button{
+                id: myButton
 
                 Text{
                     anchors.centerIn: parent
@@ -38,19 +39,6 @@ Rectangle {
 
                 width: parent.width * 1/5
 
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
             }
 
             Control_button{
@@ -66,20 +54,19 @@ Rectangle {
                 }
 
                 width: parent.width * 1/5
+            }
 
-                Image{
+            Control_button{
 
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
+                Text{
+                    anchors.centerIn: parent
+                    text: "ВЫКЛ"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: jetBrains.name
+                    color: "white"
+                    font.pixelSize: 18
                 }
+
             }
 
             Control_button{
@@ -95,47 +82,6 @@ Rectangle {
 
                 width: parent.width * 1/5
 
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
-            }
-
-            Control_button{
-
-                Text{
-                    anchors.centerIn: parent
-                    text: "ВЫКЛ"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                }
-
-                width: parent.width * 1/5
-
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
             }
 
             Control_button{
@@ -153,19 +99,6 @@ Rectangle {
                 font.pixelSize: 12
                 width: parent.width * 1/5
 
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
             }
         }
     }
@@ -204,19 +137,6 @@ Rectangle {
 
                 width: parent.width * 1/5
 
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
             }
 
             Control_button{
@@ -233,19 +153,6 @@ Rectangle {
 
                 width: parent.width * 1/5
 
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
             }
 
             Control_button{
@@ -262,19 +169,6 @@ Rectangle {
 
                 width: parent.width * 1/5
 
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
             }
 
             Control_button{
@@ -296,19 +190,6 @@ Rectangle {
 
                 width: parent.width * 1/5
 
-                Image{
-
-                    source: "qrc:/source/Indicator.svg"
-                    fillMode: Image.PreserveAspectFit
-                    anchors{
-                        bottom: parent.bottom
-                        horizontalCenter: parent.horizontalCenter
-                        margins: 1
-                    }
-
-                    width: parent.width * 2/4
-                    height: parent.height * 1/5
-                }
             }
         }
     }

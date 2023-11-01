@@ -11,10 +11,34 @@ Button {
     Layout.fillWidth: true
     Layout.fillHeight: true
 
-    background: Rectangle{
-        color: "#20292F"
-        border.width: 1
-        border.color: "white"
-        radius: 6
+    background: Image {
+        id: buttonImage
+        source: "qrc:/source/neutral_button.svg" // Исходное изображение
+        anchors.fill: parent
     }
+
+    onClicked: {
+
+        console.log("Current source:", buttonImage.source);
+
+        // Изменить картинку внутреннего Image элемента при нажатии
+        if (buttonImage.source == "qrc:/source/neutral_button.svg")
+        {
+            buttonImage.source = "qrc:/source/on_button.svg"; // Новое изображение
+            console.log("Current source:", buttonImage.source);
+        }
+        else if (buttonImage.source == "qrc:/source/on_button.svg")
+        {
+            buttonImage.source = "qrc:/source/off_button.svg"; // Возврат к исходному изображению
+            console.log("Current source:", buttonImage.source);
+        }
+        else if (buttonImage.source == "qrc:/source/off_button.svg")
+        {
+            buttonImage.source = "qrc:/source/neutral_button.svg"; // Возврат к исходному изображению
+            console.log("Current source:", buttonImage.source);
+        }
+
+    }
+
 }
+
