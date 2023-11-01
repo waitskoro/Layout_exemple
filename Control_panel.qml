@@ -28,6 +28,7 @@ Rectangle {
 
                 Text{
                     anchors.centerIn: parent
+                    anchors.margins: 5
                     text: "Открытие\nдверей\nсенсором"
                     horizontalAlignment: Text.AlignHCenter
                     font.family: jetBrains.name
@@ -61,6 +62,7 @@ Rectangle {
                     font.family: jetBrains.name
                     color: "white"
                     font.pixelSize: 18
+                    anchors.margins: 5
                 }
 
                 width: parent.width * 1/5
@@ -197,6 +199,7 @@ Rectangle {
                     color: "white"
                     font.pixelSize: 18
                     lineHeight: 0.7
+                    anchors.margins: 5
                 }
 
                 width: parent.width * 1/5

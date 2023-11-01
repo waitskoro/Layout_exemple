@@ -17,28 +17,4 @@ Button {
         border.color: "white"
         radius: 6
     }
-
-    FontLoader { id: jetBrains; source: "qrc:/fonts/JetBrains Mono/JetBrainsMono.ttf"}
-
-    Text {
-        anchors.centerIn: parent
-        text: controlButton.text
-        color: "white"
-        horizontalAlignment: Text.AlignHCenter
-        font.family: jetBrains.name
-    }
-
-    Image{
-
-        source: "qrc:/source/Indicator.svg"
-        fillMode: Image.PreserveAspectFit
-        anchors{
-            bottom: parent.bottom
-            horizontalCenter: parent.horizontalCenter
-            margins: 1
-        }
-
-        width: parent.width * 2/4
-        height: parent.height * 1/5
-    }
 }

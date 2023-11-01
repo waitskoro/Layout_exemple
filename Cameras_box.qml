@@ -21,6 +21,8 @@ Rectangle {
                 GridLayout {
                     id: camerasGrid
                     columns: 2
+                    columnSpacing : 1
+                    rowSpacing : 1
                     rows: 2
                     anchors.fill: parent
 
@@ -30,6 +32,7 @@ Rectangle {
 
                         delegate: Cameras {
                             id: cameraPane
+                            border.width: 1
 
                             Text {
                                 text: "Камера " + (index + 1)
