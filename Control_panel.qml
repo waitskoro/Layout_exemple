@@ -37,8 +37,6 @@ Rectangle {
                     font.pixelSize: 10
                 }
 
-                width: parent.width * 1/5
-
             }
 
             Control_button_up{
@@ -185,6 +183,8 @@ Rectangle {
                 }
 
                 width: parent.width * 1/5
+
+
 
             }
 

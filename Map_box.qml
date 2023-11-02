@@ -1,5 +1,5 @@
 import QtQuick 2.12
-
+import QtGraphicalEffects 1.12
 import QtLocation 5.12
 import QtPositioning 5.12
 import QtQuick.Controls 2.12
@@ -137,7 +137,7 @@ Rectangle{
         Plugin {
             id: mapPlugin
             name: "osm"
-            }
+        }
 
         Map {
             id: mapView
@@ -145,6 +145,20 @@ Rectangle{
             plugin: mapPlugin
             center: QtPositioning.coordinate(59.9386, 30.3141)
             zoomLevel: 15
+
+            Desaturate {
+                id: desature
+                anchors.fill: parent
+                source: parent
+                desaturation: 1.0
+            }
+
+            ColorOverlay {
+                anchors.fill: desature
+                source: desature
+                color: "black"
+                opacity: 0.4
+           }
         }
     }
 
@@ -179,7 +193,7 @@ Rectangle{
                 }
             }
 
-            Item{
+            Item{                
                 Layout.preferredWidth: 10
             }
         }
