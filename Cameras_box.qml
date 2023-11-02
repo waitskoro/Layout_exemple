@@ -2,18 +2,22 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
+
 Rectangle {
     id: root
     color: "black"
 
     property Cameras cameraPanene
+    property var gridRepeater: gridRepeater
 
     SwipeView{
         id: swipeView
         width: parent.width
         height: parent.height
 
+
         Repeater{
+            id: myRepeater
             model: 2
 
             Item{
@@ -42,7 +46,21 @@ Rectangle {
                             Layout.fillHeight: true
                             Layout.fillWidth: true
 
-                            MouseArea{
+                            // Обработчик для кнопки "назад" или другого события, чтобы вернуться к исходному состоянию
+                            function resetToInitialState() {
+                                for (var i = 0; i < gridRepeater.count; i++) {
+                                    var camera = gridRepeater.itemAt(i)
+                                    camera.visible = true
+                                    camera.Layout.preferredWidth = 0
+                                    camera.Layout.preferredHeight = 0
+                                }
+                                left_button.visible = true
+                                right_button.visible = true
+                                close_button.visible = false
+                            }
+
+                            // Обработчик для клика на камеру
+                            MouseArea {
                                 id: area
                                 anchors.fill: parent
 
@@ -50,53 +68,58 @@ Rectangle {
                                     if (cameraPane.Layout.preferredWidth === 0) {
                                         cameraPane.Layout.preferredWidth = parent.width
                                         cameraPane.Layout.preferredHeight = parent.height
-
                                         left_button.visible = false
                                         right_button.visible = false
                                         close_button.visible = true
-
                                         cameraPanene = cameraPane
 
-                                    }
-                                    else {
-
+                                        // Скрываем тексты других камер
+                                        for (var i = 0; i < gridRepeater.count; i++) {
+                                            var otherCamera = gridRepeater.itemAt(i)
+                                            if (otherCamera !== cameraPane) {
+                                                otherCamera.visible = false
+                                            }
+                                        }
+                                    } else {
                                         cameraPane.Layout.preferredWidth = 0
                                         cameraPane.Layout.preferredHeight = 0
-
-                                        left_button.visible = true
-                                        right_button.visible = true
-                                        close_button.visible = false
+                                        resetToInitialState()
                                     }
                                 }
                             }
+
+                            Button {
+                                    id: close_button
+                                    visible: false
+
+                                    height: 40
+                                    width: 40
+
+                                    anchors {
+                                        right: parent.right
+                                    }
+
+                                    background: Image {
+                                        source: "qrc:/source/close.svg"
+                                    }
+
+                                    onClicked: {
+                                        for (var i = 0; i < gridRepeater.count; i++) {
+                                            var camera = gridRepeater.itemAt(i)
+                                            camera.visible = true
+                                            camera.Layout.preferredWidth = 0
+                                            camera.Layout.preferredHeight = 0
+                                        }
+                                        left_button.visible = true
+                                        right_button.visible = true
+                                        close_button.visible = false
+                                   }
+                             }
+
                         }
                     }
                 }
             }
-        }
-    }
-
-    Button{
-        id: close_button
-        visible: false
-
-        height: parent.height * 1.5/10
-        width: parent.width * 1.5/15
-
-        anchors{
-            right: parent.right
-        }
-
-        background: Image{
-            source: "qrc:/source/close.svg"
-        }
-
-        onClicked: {
-            cameraPanene.Layout.preferredWidth = 0
-            cameraPanene.Layout.preferredHeight = 0
-            left_button.visible = true
-            right_button.visible = true
-            close_button.visible = false
         }
     }
 
@@ -142,6 +165,37 @@ Rectangle {
                 swipeView.currentIndex++
         }
     }
+
+    Rectangle {
+            id: notification
+            width: parent.width
+            height: 0
+            color: "lightblue"
+            visible: false
+            anchors.bottom: parent.bottom
+
+            Text {
+                text: "Это уведомление при нажатии на кнопку"
+                anchors.centerIn: parent
+            }
+
+            Behavior on height {
+                NumberAnimation {
+                    duration: 500
+                }
+            }
+
+            Button {
+                text: "Показать уведомление"
+                onClicked: {
+                    notification.visible = true
+                    notification.height = 50
+
+                    // Скрыть уведомление через 3 секунды (3000 миллисекунд)
+                    Qt.createQmlObject('import QtQuick 2.15; Timer { interval: 3000; running: true; onTriggered: { notification.visible = false } }', notification)
+                }
+            }
+        }
 }
 
 

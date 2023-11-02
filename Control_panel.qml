@@ -24,7 +24,7 @@ Rectangle {
             id: buttonRow_f
             anchors.fill: parent
 
-            Control_button{
+            Control_button_up{
                 id: myButton
 
                 Text{
@@ -41,9 +41,10 @@ Rectangle {
 
             }
 
-            Control_button{
+            Control_button_up{
 
                 Text{
+                    id: text_1
                     anchors.centerIn: parent
                     text: "ВЫКЛ"
                     horizontalAlignment: Text.AlignHCenter
@@ -53,12 +54,20 @@ Rectangle {
                     anchors.margins: 5
                 }
 
-                width: parent.width * 1/5
+                onClicked: {
+                    if (text_1.text === "ВЫКЛ") {
+                        text_1.text = "ВКЛ";
+                    } else {
+                        text_1.text = "ВЫКЛ";
+                    }
+                    console.log("Button clicked, text is now: " + text_1.text);
+                }
             }
 
-            Control_button{
+            Control_button_up{
 
                 Text{
+                    id: text_2
                     anchors.centerIn: parent
                     text: "ВЫКЛ"
                     horizontalAlignment: Text.AlignHCenter
@@ -67,11 +76,21 @@ Rectangle {
                     font.pixelSize: 18
                 }
 
+                onClicked: {
+                    if (text_2.text === "ВЫКЛ") {
+                        text_2.text = "ВКЛ";
+                    } else {
+                        text_2.text = "ВЫКЛ";
+                    }
+                    console.log("Button clicked, text is now: " + text_2.text);
+                }
+
             }
 
-            Control_button{
+            Control_button_up{
 
                 Text{
+                    id: text_3
                     anchors.centerIn: parent
                     text: "ВЫКЛ"
                     horizontalAlignment: Text.AlignHCenter
@@ -80,13 +99,21 @@ Rectangle {
                     font.pixelSize: 18
                 }
 
-                width: parent.width * 1/5
+                onClicked: {
+                    if (text_3.text === "ВЫКЛ") {
+                        text_3.text = "ВКЛ";
+                    } else {
+                        text_3.text = "ВЫКЛ";
+                    }
+                    console.log("Button clicked, text is now: " + text_3.text);
+                }
 
             }
 
-            Control_button{
+            Control_button_up{
 
                 Text{
+                    id: text_4
                     anchors.centerIn: parent
                     text: "ВЫКЛ"
                     horizontalAlignment: Text.AlignHCenter
@@ -96,8 +123,14 @@ Rectangle {
                 }
 
 
-                font.pixelSize: 12
-                width: parent.width * 1/5
+                onClicked: {
+                    if (text_4.text === "ВЫКЛ") {
+                        text_4.text = "ВКЛ";
+                    } else {
+                        text_4.text = "ВЫКЛ";
+                    }
+                    console.log("Button clicked, text is now: " + text_4.text);
+                }
 
             }
         }
@@ -122,7 +155,7 @@ Rectangle {
             id: buttonRow_s
             anchors.fill: parent
 
-            Control_button{
+            Control_button_down{
 
                 Text{
                     anchors.centerIn: parent
@@ -139,7 +172,7 @@ Rectangle {
 
             }
 
-            Control_button{
+            Control_button_down{
 
                 Text{
                     anchors.centerIn: parent
@@ -155,7 +188,7 @@ Rectangle {
 
             }
 
-            Control_button{
+            Control_button_down{
 
                 Text{
                     anchors.centerIn: parent
@@ -171,7 +204,7 @@ Rectangle {
 
             }
 
-            Control_button{
+            Control_button_down{
 
                 Text{
                     anchors{

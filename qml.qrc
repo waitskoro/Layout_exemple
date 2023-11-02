@@ -5,18 +5,19 @@
         <file>Star.qml</file>
         <file>Cameras_box.qml</file>
         <file>Control_panel.qml</file>
-        <file>Control_button.qml</file>
+        <file>Control_button_down.qml</file>
         <file>Map_box.qml</file>
         <file>Upper_stars.qml</file>
         <file>source/star.svg</file>
         <file>source/close.svg</file>
         <file>source/on_left.svg</file>
         <file>source/on_right.svg</file>
-        <file>source/Indicator.svg</file>
         <file>fonts/JetBrains Mono/JetBrainsMono.ttf</file>
         <file>fonts/IBM Plex Sans/IBMPlexSans-Regular.ttf</file>
         <file>source/neutral_button.svg</file>
         <file>source/off_button.svg</file>
         <file>source/on_button.svg</file>
+        <file>Control_button_up.qml</file>
+        <file>source/message.svg</file>
     </qresource>
 </RCC>

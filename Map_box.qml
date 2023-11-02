@@ -1,4 +1,5 @@
 import QtQuick 2.12
+
 import QtLocation 5.12
 import QtPositioning 5.12
 import QtQuick.Controls 2.12
@@ -133,36 +134,17 @@ Rectangle{
             top: upper_panel.bottom
         }
 
+        Plugin {
+            id: mapPlugin
+            name: "osm"
+            }
+
         Map {
-            id:map_
+            id: mapView
             anchors.fill: parent
-            plugin: Plugin{
-                id:myplug
-                name:"mapboxgl"
-
-                PluginParameter {
-                            name: "mapboxgl.access_token"
-                            value:"pk.eyJ1IjoibWlsYWRsb3ZlYm90aCIsImEiOiJjanZiaHlrZXEwczF5NDRxZnp0cnFseG9jIn0.CZjNPyoSnkUG4NaEzvb36A"
-                        }
-                PluginParameter {
-                            name: "mapboxgl.style_url"
-                            // Используйте URL темного стиля Mapbox, например, "mapbox://styles/mapbox/dark-v10"
-                            value: "mapbox://styles/mapbox/dark-v10"
-                        }
-            }
-            zoomLevel: 12
-            center: QtPositioning.coordinate(34.08, 49.70)
-
-            onSupportedMapTypesChanged: {
-                for (var i = 0; i <= map.supportedMapTypes.length - 1; i++) {
-                    console.log(i + ":" + map.supportedMapTypes[i].name)
-                }
-            }
-
-            onErrorChanged: {
-                console.log(map.error)
-            }
-
+            plugin: mapPlugin
+            center: QtPositioning.coordinate(59.9386, 30.3141)
+            zoomLevel: 15
         }
     }
 
