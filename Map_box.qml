@@ -129,6 +129,9 @@ Rectangle{
         width: parent.width
         height: parent.height * 0.8/1
         color: "transparent"
+        radius: 12
+
+        anchors.bottom: low_stars.bottom
 
         anchors{
             top: upper_panel.bottom
@@ -141,7 +144,9 @@ Rectangle{
 
         Map {
             id: mapView
+
             anchors.fill: parent
+
             plugin: mapPlugin
             center: QtPositioning.coordinate(59.9386, 30.3141)
             zoomLevel: 15
@@ -160,6 +165,24 @@ Rectangle{
                 opacity: 0.4
            }
         }
+
+        Rectangle{
+            id: rec_image
+            color: "transparent"
+            height: 52
+            width: 33
+
+            anchors{
+                top: upper_panel.bottom
+                margins: 30
+                right: map.right
+            }
+
+            Image{
+                source: "qrc:/source/fork.svg"
+                anchors.fill: rec_image
+            }
+        }
     }
 
     Rectangle{
@@ -168,8 +191,12 @@ Rectangle{
         height: parent.height * 0.1/1
         color: "transparent"
 
+        Image{
+            source: "qrc:/source/frame.png"
+            anchors.fill: parent
+        }
+
         anchors{
-            top: map.bottom
             bottom: root.bottom
         }
 
@@ -193,7 +220,7 @@ Rectangle{
                 }
             }
 
-            Item{                
+            Item{
                 Layout.preferredWidth: 10
             }
         }
