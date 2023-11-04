@@ -1,3 +1,4 @@
+import QtQml 2.12
 import QtQuick 2.0
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
@@ -18,12 +19,18 @@ Button {
     }
 
     onClicked: {
-
-
         // Изменить картинку внутреннего Image элемента при нажатии
         if (buttonImage.source == "qrc:/source/neutral_button.svg")
         {
             buttonImage.source = "qrc:/source/on_button.svg"; // Новое изображение
+
+            if (messageLoader.item) {
+                var messageComponent = messageLoader.item;
+                var newImage = {source: "qrc:/source/message.svg"}
+                messageComponent.showMessage.model.append(newImage);
+                console.log("Added");
+            }
+
         }
         else if (buttonImage.source == "qrc:/source/on_button.svg")
         {
@@ -31,5 +38,4 @@ Button {
         }
 
     }
-
 }

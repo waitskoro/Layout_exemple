@@ -5,7 +5,8 @@ import QtQuick.Layouts 1.3
 Rectangle {
     id: control_panel
     color: "transparent"
-
+    
+    
     FontLoader { id: jetBrains; source: "qrc:/fonts/JetBrains Mono/JetBrainsMono.ttf"}
 
     Rectangle{

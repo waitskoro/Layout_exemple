@@ -1,3 +1,4 @@
+import QtQml 2.12
 import QtQuick 2.12
 import QtGraphicalEffects 1.12
 import QtLocation 5.12
@@ -9,6 +10,8 @@ Rectangle{
     id: root
     radius: 12
     color: "black"
+
+
 
     Rectangle{
         id: upper_panel
@@ -164,6 +167,26 @@ Rectangle{
                 color: "black"
                 opacity: 0.4
            }
+
+            MessageList{
+                height: parent.height * 1/2
+                width: parent.width * 1/3
+
+            }
+        }
+
+        Rectangle{
+            id: stone
+            height: 16
+            width: 1
+            color: "transparent"
+
+            anchors{
+
+                margins: 12
+                right: map.right
+                topMargin: 12
+            }
         }
 
         Rectangle{
@@ -173,9 +196,10 @@ Rectangle{
             width: 33
 
             anchors{
-                top: upper_panel.bottom
-                margins: 30
+
+                rightMargin: 12
                 right: map.right
+                top: stone.bottom
             }
 
             Image{
@@ -183,7 +207,11 @@ Rectangle{
                 anchors.fill: rec_image
             }
         }
+
+
     }
+
+
 
     Rectangle{
         id: low_stars

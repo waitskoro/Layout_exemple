@@ -19,8 +19,8 @@
         <file>source/on_button.svg</file>
         <file>Control_button_up.qml</file>
         <file>source/message.svg</file>
-        <file>Message.qml</file>
         <file>source/frame.png</file>
         <file>source/fork.svg</file>
+        <file>MessageList.qml</file>
     </qresource>
 </RCC>
