@@ -1,27 +1,37 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.12
 
 Rectangle {
+    id: recList
+    color: "transparent"
+    height: parent.height
+    width: parent.width
 
-    width: 180
-    height: 200
+    anchors {
+        bottom: parent.bottom
+    }
 
-    ListView {
-        anchors.fill: parent
-        model: ListModel {
-            ListElement { source: "qrc:/source/message.svg" }
-            ListElement { source: "qrc:/source/message.svg" }
-            ListElement { source: "qrc:/source/message.svg" }
-        }
+    Column {
+        width: recList.width // Установите ширину
+        height: recList.height // Установите высоту
 
-        delegate: Item {
-            width: parent.width
-            height: 20
+        spacing: 0
 
-            Image {
-                source: model.source
-                anchors.fill: parent
+        Repeater {
+            model: 4
+            Rectangle{
+                color: "transparent"
+                height: recList.height * 1/4
+                width: recList.width
+
+                Image {
+                   anchors.fill: parent
+                   source: "qrc:/source/message.svg" // Источник изображения
+                   fillMode: Image.PreserveAspectFit
+
+
+               }
             }
         }
     }
-
 }

@@ -169,8 +169,13 @@ Rectangle{
            }
 
             MessageList{
-                height: parent.height * 1/2
-                width: parent.width * 1/3
+                height: parent.height - 100
+                width: parent.width  * 0.8/2
+
+                anchors{
+                    left: parent.left
+                    bottomMargin: 40
+                }
 
             }
         }
@@ -192,8 +197,8 @@ Rectangle{
         Rectangle{
             id: rec_image
             color: "transparent"
-            height: 52
-            width: 33
+            height: parent.height * 1/8
+            width: parent.width * 1/15
 
             anchors{
 
@@ -205,6 +210,7 @@ Rectangle{
             Image{
                 source: "qrc:/source/fork.svg"
                 anchors.fill: rec_image
+                fillMode: Image.PreserveAspectFit
             }
         }
 
