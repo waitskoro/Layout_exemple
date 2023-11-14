@@ -8,7 +8,6 @@ Rectangle {
     color: "black"
 
     property Cameras cameraPanene
-    property var gridRepeater: gridRepeater
 
     SwipeView{
         id: swipeView
@@ -37,11 +36,6 @@ Rectangle {
                         delegate: Cameras {
                             id: cameraPane
                             border.width: 1
-
-                            Text {
-                                text: "Камера " + (index + 1)
-                                anchors.centerIn: parent
-                            }
 
                             Layout.fillHeight: true
                             Layout.fillWidth: true
