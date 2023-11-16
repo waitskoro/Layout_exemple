@@ -9,42 +9,42 @@ Rectangle {
 
 
 
-    Item {
-        width: parent.width
-        height: parent.height
+//    Item {
+//        width: parent.width
+//        height: parent.height
 
 
-        Camera {
-            id: camera
-            digitalZoom:zoomSlider.value
-            imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
+//        Camera {
+//            id: camera
+//            digitalZoom:zoomSlider.value
+//            imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
 
-            exposure {
-                exposureCompensation: -1.0
-                exposureMode: Camera.ExposurePortrait
-            }
+//            exposure {
+//                exposureCompensation: -1.0
+//                exposureMode: Camera.ExposurePortrait
+//            }
 
-            flash.mode: Camera.FlashRedEyeReduction
+//            flash.mode: Camera.FlashRedEyeReduction
 
-            imageCapture {
-                onImageCaptured: {
-                    photoPreview.source = preview  // Show the preview in an Image
-                }
-            }
-        }
+//            imageCapture {
+//                onImageCaptured: {
+//                    photoPreview.source = preview  // Show the preview in an Image
+//                }
+//            }
+//        }
 
-        VideoOutput {
-            source: camera
-            fillMode: VideoOutput.PreserveAspectCrop
-            width: parent.width
-            height: parent.height
-            focus : visible // to receive focus and capture key events when visible
-        }
+//        VideoOutput {
+//            source: camera
+//            fillMode: VideoOutput.PreserveAspectCrop
+//            width: parent.width
+//            height: parent.height
+//            focus : visible // to receive focus and capture key events when visible
+//        }
 
-        Image {
-            id: photoPreview
-            width: parent.width
-            height: parent.height
-        }
-    }
+//        Image {
+//            id: photoPreview
+//            width: parent.width
+//            height: parent.height
+//        }
+//    }
 }

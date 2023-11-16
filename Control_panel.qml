@@ -25,112 +25,72 @@ Rectangle {
             id: buttonRow_f
             anchors.fill: parent
 
-            Control_button_up{
-                id: myButton
+            Repeater{
+                model: listUpperButtons
+                delegate: Control_button_up{
 
-                Text{
-                    anchors.centerIn: parent
-                    anchors.margins: 5
-                    text: "Открытие\nдверей\nсенсором"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 10
-                }
+                    Text{
+                        id:text_1
+                        anchors.centerIn: parent
+                        text: model.name
+                        horizontalAlignment: Text.AlignHCenter
+                        font.family: jetBrains.name
+                        color: "white"
+                        font.pixelSize: model.fontsize
+                        anchors.margins: 5
 
-            }
-
-            Control_button_up{
-
-                Text{
-                    id: text_1
-                    anchors.centerIn: parent
-                    text: "ВЫКЛ"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                    anchors.margins: 5
-                }
-
-                onClicked: {
-                    if (text_1.text === "ВЫКЛ") {
-                        text_1.text = "ВКЛ";
-                    } else {
-                        text_1.text = "ВЫКЛ";
                     }
-                    console.log("Button clicked, text is now: " + text_1.text);
+
+                    onClicked: {
+                        if (text_1.text === "ВЫКЛ") {
+                            text_1.text = "ВКЛ";
+                        }
+                        else if (text_1.text === "ВКЛ")
+                        {
+                            text_1.text = "ВЫКЛ"
+                        }
+
+                        if(text_1.txet){
+
+                        }
+
+                        console.log("Button clicked, text is now: " + text_1.text);
+                    }
                 }
             }
+        }
 
-            Control_button_up{
+        ListModel {
+            id: listUpperButtons
 
-                Text{
-                    id: text_2
-                    anchors.centerIn: parent
-                    text: "ВЫКЛ"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                }
-
-                onClicked: {
-                    if (text_2.text === "ВЫКЛ") {
-                        text_2.text = "ВКЛ";
-                    } else {
-                        text_2.text = "ВЫКЛ";
-                    }
-                    console.log("Button clicked, text is now: " + text_2.text);
-                }
-
+            ListElement
+            {
+                name: "Открытие\nдверей\nсенсором"
+                fontsize: 10
             }
 
-            Control_button_up{
-
-                Text{
-                    id: text_3
-                    anchors.centerIn: parent
-                    text: "ВЫКЛ"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                }
-
-                onClicked: {
-                    if (text_3.text === "ВЫКЛ") {
-                        text_3.text = "ВКЛ";
-                    } else {
-                        text_3.text = "ВЫКЛ";
-                    }
-                    console.log("Button clicked, text is now: " + text_3.text);
-                }
-
+            ListElement
+            {
+                name: "ВЫКЛ"
+                fontsize: 18
             }
 
-            Control_button_up{
+            ListElement
+            {
+                name: "ВЫКЛ"
+                fontsize: 18
+            }
 
-                Text{
-                    id: text_4
-                    anchors.centerIn: parent
-                    text: "ВЫКЛ"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                }
+            ListElement
+            {
+                name: "ВЫКЛ"
+                fontsize: 18
+            }
 
-
-                onClicked: {
-                    if (text_4.text === "ВЫКЛ") {
-                        text_4.text = "ВКЛ";
-                    } else {
-                        text_4.text = "ВЫКЛ";
-                    }
-                    console.log("Button clicked, text is now: " + text_4.text);
-                }
-
+            ListElement
+            {
+                name: "ВЫКЛ"
+                fontsize: 18
             }
         }
     }
@@ -154,76 +114,66 @@ Rectangle {
             id: buttonRow_s
             anchors.fill: parent
 
-            Control_button_down{
+            Repeater{
+                model: listDownButtons
+                delegate: Control_button_down{
 
-                Text{
-                    anchors.centerIn: parent
-                    text: "1\nдверь"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                    lineHeight: 0.7
-                    anchors.margins: 5
-                }
+                    Text{
+                        id:text_2
+                        anchors.centerIn: parent
+                        text: model.name
+                        horizontalAlignment: Text.AlignHCenter
+                        font.family: jetBrains.name
+                        color: "white"
+                        font.pixelSize: model.fontsize
+                        anchors.margins: 5
 
-                width: parent.width * 1/5
-
-            }
-
-            Control_button_down{
-
-                Text{
-                    anchors.centerIn: parent
-                    text: "2\nдверь"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                    lineHeight: 0.7
-                }
-
-                width: parent.width * 1/5
-
-
-
-            }
-
-            Control_button_down{
-
-                Text{
-                    anchors.centerIn: parent
-                    text: "3\nдверь"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                    lineHeight: 0.7
-                }
-
-                width: parent.width * 1/5
-
-            }
-
-            Control_button_down{
-
-                Text{
-                    anchors{
-
-                        centerIn: parent
                     }
 
-                    text: "4\nдверь"
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: jetBrains.name
-                    color: "white"
-                    font.pixelSize: 18
-                    lineHeight: 0.7
+                    onClicked: {
+                        if (text_2.text === "ВЫКЛ") {
+                            text_2.text = "ВКЛ";
+                        }
+                        else if (text_2.text === "ВКЛ")
+                        {
+                            text_2.text = "ВЫКЛ"
+                        }
 
+                        if(text_2.txet){
+
+                        }
+
+                        console.log("Button clicked, text is now: " + text_2.text);
+                    }
                 }
+            }
+        }
 
-                width: parent.width * 1/5
+        ListModel {
+            id: listDownButtons
 
+            ListElement
+            {
+                name: "1\nдверь"
+                fontsize: 18
+            }
+
+            ListElement
+            {
+                name: "2\nдверь"
+                fontsize: 18
+            }
+
+            ListElement
+            {
+                name: "3\nдверь"
+                fontsize: 18
+            }
+
+            ListElement
+            {
+                name: "4\nдверь"
+                fontsize: 18
             }
         }
     }
